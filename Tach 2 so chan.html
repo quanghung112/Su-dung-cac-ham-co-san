@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Datdau "-" giua 2 so chan</title>
+</head>
+<body>
+<p> Nhap so</p>
+<input type="number" id="value">
+<input type="button" value="Chen dau -" onclick="Chen()">
+<p id="ketqua"></p>
+<script>
+    function Chen() {
+        let num = document.getElementById('value').value;
+        let str = num.toString();
+        let result = [str[0]];
+        console.log(str);
+        for (i = 0; i < str.length; i++) {
+            if (str[i - 1] % 2 == 0 && str[i] % 2 == 0) {
+                result.push('-', str[i]);
+            } else {
+                result.push(str[i]);
+            }
+        }
+        document.getElementById('ketqua').innerHTML = result.join('');
+    }
+</script>
+</body>
+</html>

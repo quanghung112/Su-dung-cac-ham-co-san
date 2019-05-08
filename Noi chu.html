@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Noi chu</title>
+</head>
+<body>
+<h1>Noichuoi</h1>
+<p> Nhap chuoi</p>
+<input type="text" id="textvalue" >
+<input type="button" value="ADD" onclick="Addvalue()">
+<input type="button" value="Ghep" onclick="Ghep()">
+<p id="chuoi"></p>
+<script>
+        let arr=[];
+        let x=0;
+        function Addvalue() {
+            let str=document.getElementById('textvalue').value;
+            arr[x]=str;
+            x++;
+            document.getElementById('textvalue').value="";
+        }
+        function Ghep() {
+            let chuoi= "<hr/>";
+            //document.getElementById('chuoi').innerHTML=chuoi+arr.toString();
+            //document.getElementById('chuoi').innerHTML=chuoi+arr.join();
+            document.getElementById('chuoi').innerHTML=chuoi+arr.join('-');
+        }
+    </script>
+</body>
+</html>

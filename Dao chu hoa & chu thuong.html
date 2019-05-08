@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chu hoa chu thuong</title>
+</head>
+<body>
+<p> Nhap chuoi</p>
+<input type="text" id="value">
+<input type="button" value="Chuyen" onclick="Chuyen()">
+<p id="ketqua"></p>
+<script>
+    function Chuyen() {
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuwxyz';
+        let str = document.getElementById('value').value;
+        let arr = [];
+        for (i = 0; i < str.length; i++) {
+            if (UPPER.indexOf(str[i]) != -1) {
+                arr.push(str[i].toLowerCase());
+            } else if (LOWER.indexOf(str[i]) != -1) {
+                arr.push(str[i].toUpperCase());
+            } else {
+                arr.push(str[i]);
+            }
+        }
+        document.getElementById('ketqua').innerHTML = arr.join('');
+    }
+</script>
+</body>
+</html>
